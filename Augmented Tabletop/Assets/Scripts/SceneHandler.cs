@@ -1,4 +1,5 @@
 ﻿using Firebase.Database;
+using GoogleARCore;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,9 +23,17 @@ public class SceneHandler : MonoBehaviour
 
 	private bool _changed;
 
-	public void Initialize(DataSnapshot data)
+	private static bool _saved;
+
+	private Vector3 _position;
+
+	public void Initialize(DataSnapshot data, Vector3 position)
 	{
-		_changed = true;
+		_position = position;
+		_RemoveAllModels();
+		elements = new List<Element>();
+		_changed = false;
+		//gameObject.transform.position = _position;
 		foreach (DataSnapshot child in data.Children)
 		{
 			Element e = new Element();
@@ -38,28 +47,30 @@ public class SceneHandler : MonoBehaviour
 			_AttachModel(e);
 			elements.Add(e);
 		}
+		gameObject.transform.localPosition = new Vector3(0, 0, 0);
 	}
 
 	public void Save()
 	{
 		//_ShowAndroidToastMessage("Saving data...");
-		string json = "[";
+		string json = "{";
 
-		for (int i = 0; i < elements.Capacity; i++)
+		for (int i = 0; i < elements.Count; i++)
 		{
 			Element e = elements[i];
-			json += "{\"data\":\"" + e.data + "\","
+			json += "\"" + i + "\":{\"data\":\"" + e.data + "\","
 				+ "\"position\":[" + e.position[0] + "," 
 				+ e.position[1] + "," + e.position[2] + "],"
 				+ "\"rotation\":[" + e.rotation[0] + ","
 				+ e.rotation[1] + "," + e.rotation[2] + "]}";
-			if (i + 1 != elements.Capacity)
+			if (i + 1 != elements.Count)
 			{
 				json += ",";
 			}
 		}
+		_saved = true;
 
-		json += "]";
+		json += "}";
 		FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
 		DatabaseReference row = database.GetReference(
 			Table.tableNumber.ToString()).Child("array");
@@ -127,7 +138,25 @@ public class SceneHandler : MonoBehaviour
 		elements = new List<Element>();
 		_changed = false;
 		_RefreshModels();
+		FirebaseDatabase.DefaultInstance.GetReference(Table.tableNumber.ToString())
+			.Child("array")
+			.ValueChanged += HandleChange;
+		_saved = false;
     }
+
+	void HandleChange(object sender, ValueChangedEventArgs args)
+	{
+		if (_saved)
+		{
+			_saved = false;
+			return;
+		}
+		if (args.DatabaseError != null)
+		{
+			return;
+		}
+		Initialize(args.Snapshot, _position);
+	}
 
     // Update is called once per frame
     void Update()
@@ -172,8 +201,8 @@ public class SceneHandler : MonoBehaviour
 		e.model = Object.Instantiate(_GetModel(e.data));
 		e.model.transform.parent = gameObject.transform;
 		e.model.transform.localScale = Vector3.one * SCALE;
-		e.model.transform.position = e.position * SCALE;
-		e.model.transform.eulerAngles = e.rotation;
+		e.model.transform.localPosition = e.position * SCALE;
+		e.model.transform.localEulerAngles = e.rotation;
 	}
 
 	private GameObject _GetModel(string data)

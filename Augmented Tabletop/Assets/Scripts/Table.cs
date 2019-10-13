@@ -55,11 +55,12 @@ public class Table : MonoBehaviour
 
 						_ShowAndroidToastMessage("Welcome to the Table!");
 
+						Scene.GetComponent<SceneHandler>()
+						.Initialize(snapshot.Child("array"), result.Anchor.transform.position);
 						Scene.transform.parent = t;
 						Scene.GetComponent<SceneHandler>().SetChangedTrue();
-						//Scene.transform.position = new Vector3(t.position.x, t.position.y, t.position.z);
-						Scene.GetComponent<SceneHandler>()
-						.Initialize(snapshot.Child("array"));
+						Scene.transform.localPosition = new Vector3(0, 0, 0);
+						
 					});
 				}
 			});

@@ -61,7 +61,7 @@ public class TableController : MonoBehaviour
 	{
 		if (Selected != null)
 		{
-			Selected.transform.position = Selected.transform.position
+			Selected.transform.localPosition = Selected.transform.localPosition
 				+ Vector3.left * SceneHandler.SCALE;
 			Element e = Scene.GetElement(Selected);
 			e.position = e.position + Vector3.left;
@@ -73,7 +73,7 @@ public class TableController : MonoBehaviour
 	{
 		if (Selected != null)
 		{
-			Selected.transform.position = Selected.transform.position
+			Selected.transform.localPosition = Selected.transform.localPosition
 				+ Vector3.right * SceneHandler.SCALE;
 			Element e = Scene.GetElement(Selected);
 			e.position = e.position + Vector3.right;
@@ -85,7 +85,7 @@ public class TableController : MonoBehaviour
 	{
 		if (Selected != null)
 		{
-			Selected.transform.position = Selected.transform.position
+			Selected.transform.localPosition = Selected.transform.localPosition
 				+ Vector3.forward * SceneHandler.SCALE;
 			Element e = Scene.GetElement(Selected);
 			e.position = e.position + Vector3.forward;
@@ -97,7 +97,7 @@ public class TableController : MonoBehaviour
 	{
 		if (Selected != null)
 		{
-			Selected.transform.position = Selected.transform.position
+			Selected.transform.localPosition = Selected.transform.localPosition
 				+ Vector3.back * SceneHandler.SCALE;
 			Element e = Scene.GetElement(Selected);
 			e.position = e.position + Vector3.back;
@@ -109,7 +109,7 @@ public class TableController : MonoBehaviour
 	{
 		if (Selected != null)
 		{
-			Selected.transform.position = Selected.transform.position
+			Selected.transform.localPosition = Selected.transform.localPosition
 				+ Vector3.up * SceneHandler.SCALE;
 			Element e = Scene.GetElement(Selected);
 			e.position = e.position + Vector3.up;
@@ -121,7 +121,7 @@ public class TableController : MonoBehaviour
 	{
 		if (Selected != null)
 		{
-			Selected.transform.position = Selected.transform.position
+			Selected.transform.localPosition = Selected.transform.localPosition
 				+ Vector3.down * SceneHandler.SCALE;
 			Element e = Scene.GetElement(Selected);
 			e.position = e.position + Vector3.down;
@@ -133,7 +133,7 @@ public class TableController : MonoBehaviour
 	{
 		if (Selected != null)
 		{
-			Selected.transform.eulerAngles = Selected.transform.eulerAngles
+			Selected.transform.localEulerAngles = Selected.transform.localEulerAngles
 				+ Vector3.up * 90;
 			Element e = Scene.GetElement(Selected);
 			e.rotation = e.rotation + Vector3.up * 90;
