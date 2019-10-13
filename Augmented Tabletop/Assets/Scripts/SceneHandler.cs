@@ -42,7 +42,7 @@ public class SceneHandler : MonoBehaviour
 
 	public void Save()
 	{
-		_ShowAndroidToastMessage("Saving data...");
+		//_ShowAndroidToastMessage("Saving data...");
 		string json = "[";
 
 		for (int i = 0; i < elements.Capacity; i++)
@@ -66,10 +66,10 @@ public class SceneHandler : MonoBehaviour
 		row.SetRawJsonValueAsync(json).ContinueWith(task => {
 			if (task.IsFaulted)
 			{
-				_ShowAndroidToastMessage("Save failed! " + task.Exception);
+				//_ShowAndroidToastMessage("Save failed! " + task.Exception);
 			} else
 			{
-				_ShowAndroidToastMessage("Save Success");
+				//_ShowAndroidToastMessage("Save Success");
 			}
 		});
 	}

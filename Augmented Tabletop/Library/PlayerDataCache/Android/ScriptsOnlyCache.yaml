@@ -33,8 +33,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.InputField
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
-    com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Scenes/Create Table.unity:
     - Class: 1
@@ -62,47 +60,47 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9902}
+      Script: {instanceID: 9904}
     - Class: 114
-      Script: {instanceID: 10158}
+      Script: {instanceID: 10160}
     - Class: 114
-      Script: {instanceID: 10214}
+      Script: {instanceID: 10216}
     - Class: 114
-      Script: {instanceID: 10662}
+      Script: {instanceID: 10664}
     - Class: 114
-      Script: {instanceID: 10672}
+      Script: {instanceID: 10674}
     - Class: 114
-      Script: {instanceID: 10692}
+      Script: {instanceID: 10694}
     - Class: 114
-      Script: {instanceID: 10758}
+      Script: {instanceID: 10762}
     - Class: 114
-      Script: {instanceID: 10786}
+      Script: {instanceID: 10790}
     - Class: 114
-      Script: {instanceID: 10976}
+      Script: {instanceID: 10800}
     - Class: 114
-      Script: {instanceID: 11192}
+      Script: {instanceID: 10984}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11200}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11344}
     - Class: 114
-      Script: {instanceID: 11572}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11666}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11674}
     - Class: 114
-      Script: {instanceID: 11978}
+      Script: {instanceID: 11758}
     - Class: 114
-      Script: {instanceID: 11982}
+      Script: {instanceID: 11986}
     - Class: 114
-      Script: {instanceID: 12090}
+      Script: {instanceID: 11990}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 12098}
     - Class: 114
-      Script: {instanceID: 12500}
+      Script: {instanceID: 12152}
     - Class: 114
-      Script: {instanceID: 15310}
+      Script: {instanceID: 12510}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -141,25 +139,25 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9902}
+      Script: {instanceID: 9904}
     - Class: 114
-      Script: {instanceID: 10158}
+      Script: {instanceID: 10160}
     - Class: 114
-      Script: {instanceID: 10214}
+      Script: {instanceID: 10216}
     - Class: 114
-      Script: {instanceID: 10758}
+      Script: {instanceID: 10762}
     - Class: 114
-      Script: {instanceID: 10764}
+      Script: {instanceID: 10768}
     - Class: 114
-      Script: {instanceID: 11088}
+      Script: {instanceID: 11096}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11344}
     - Class: 114
-      Script: {instanceID: 11594}
+      Script: {instanceID: 11602}
     - Class: 114
-      Script: {instanceID: 11978}
+      Script: {instanceID: 11986}
     - Class: 114
-      Script: {instanceID: 12500}
+      Script: {instanceID: 12510}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -202,51 +200,51 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9902}
+      Script: {instanceID: 9904}
     - Class: 114
-      Script: {instanceID: 10158}
+      Script: {instanceID: 10160}
     - Class: 114
-      Script: {instanceID: 10214}
+      Script: {instanceID: 10216}
     - Class: 114
-      Script: {instanceID: 10662}
+      Script: {instanceID: 10664}
     - Class: 114
-      Script: {instanceID: 10672}
+      Script: {instanceID: 10674}
     - Class: 114
-      Script: {instanceID: 10692}
+      Script: {instanceID: 10694}
     - Class: 114
-      Script: {instanceID: 10758}
+      Script: {instanceID: 10732}
     - Class: 114
-      Script: {instanceID: 10786}
+      Script: {instanceID: 10762}
     - Class: 114
-      Script: {instanceID: 10976}
+      Script: {instanceID: 10790}
     - Class: 114
-      Script: {instanceID: 11192}
+      Script: {instanceID: 10886}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 10984}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11200}
     - Class: 114
-      Script: {instanceID: 11572}
+      Script: {instanceID: 11344}
     - Class: 114
-      Script: {instanceID: 11666}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 11978}
+      Script: {instanceID: 11674}
     - Class: 114
-      Script: {instanceID: 11982}
+      Script: {instanceID: 11758}
     - Class: 114
-      Script: {instanceID: 12090}
+      Script: {instanceID: 11986}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 11990}
     - Class: 114
-      Script: {instanceID: 12500}
+      Script: {instanceID: 12098}
     - Class: 114
-      Script: {instanceID: 12532}
+      Script: {instanceID: 12152}
     - Class: 114
-      Script: {instanceID: 32832}
+      Script: {instanceID: 12510}
     - Class: 114
-      Script: {instanceID: 48854}
+      Script: {instanceID: 12542}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -538,6 +536,12 @@ ScriptsOnlyBuild:
     className: PlaneDiscoveryGuide
   - hash:
       serializedVersion: 2
+      Hash: d3c9d07b6de13fa772601ab97e836a06
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TableController
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -562,6 +566,12 @@ ScriptsOnlyBuild:
     className: HelloARController
   - hash:
       serializedVersion: 2
+      Hash: f3d1807a613ed4b83d9c90e8aa51a8a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GoogleARCore.Examples.HelloAR
+    className: CreateTable
+  - hash:
+      serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -584,6 +594,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: a4a18d6ada483ec4fcb2599b30949c10
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneHandler
   - hash:
       serializedVersion: 2
       Hash: 0451019579614cc079b33f5be5df7244
@@ -1052,27 +1068,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: f3d1807a613ed4b83d9c90e8aa51a8a1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: GoogleARCore.Examples.HelloAR
-    className: CreateTable
-  - hash:
-      serializedVersion: 2
-      Hash: a4a18d6ada483ec4fcb2599b30949c10
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SceneHandler
-  - hash:
-      serializedVersion: 2
-      Hash: d3c9d07b6de13fa772601ab97e836a06
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TableController
   platform: 13
   scenePathNames:
   - Assets/Scenes/Join.unity
   - Assets/Scenes/Create Table.unity
   - Assets/Scenes/Table.unity
-  playerPath: C:/Users/nikol/Downloads/AT-debug.apk
+  playerPath: C:/Users/nikol/Documents/Dubhacks/Dubhacks_Augmented_Table/AT-debug.apk

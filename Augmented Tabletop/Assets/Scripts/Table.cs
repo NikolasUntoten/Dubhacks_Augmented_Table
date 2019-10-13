@@ -53,8 +53,7 @@ public class Table : MonoBehaviour
 														 t.rotation), t);
 						t.SetPositionAndRotation(worldPose.position, worldPose.rotation);
 
-						_ShowAndroidToastMessage("Welcome to the Table!"
-							+ ", " + result.Anchor.transform.position);
+						_ShowAndroidToastMessage("Welcome to the Table!");
 
 						Scene.transform.parent = t;
 						Scene.GetComponent<SceneHandler>().SetChangedTrue();
@@ -145,12 +144,12 @@ public class Table : MonoBehaviour
 		RaycastHit hit;
 		if (Physics.Raycast(Frame.Pose.position, Frame.Pose.forward, out hit, 100.0f))
 		{
-			_ShowAndroidToastMessage("HIT! " + hit.collider.gameObject.ToString());
+			//_ShowAndroidToastMessage("HIT! " + hit.collider.gameObject.ToString());
 			TableController.GetComponent<TableController>()
 				.Click(hit.collider.gameObject.transform.parent.gameObject);
 		} else
 		{
-			_ShowAndroidToastMessage("MISS");
+			//_ShowAndroidToastMessage("MISS");
 		}
 	}
 
